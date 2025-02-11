@@ -10,6 +10,9 @@ void setup() {
 } // end of setup
 
 void draw() {
-  background(200);
-  ellipse(300, 300, mouseX, mouseY);
+  //background(225);
+  strokeWeight(1);
+  //fill(mouseX);
+  ellipse(300, 300, 200, 200);
+  line(300, 300, mouseX, mouseY);
 } // end of draw
