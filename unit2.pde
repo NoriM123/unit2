@@ -4,16 +4,27 @@
 int cactusX;
 int cactiY;
 int snakeX;
+int a;
+int b;
 
 void setup() {
   size(700, 600, P2D);
   cactusX = 0;
   cactiY = 0;
   snakeX = 0;
+  a = 0;
+  b = 0;
 }
 
 void draw() {
   background(255, 227, 149, 225);
+   //sun
+  stroke(227, 201, 73, 200);
+  fill(227, 201, 73, 200);
+  rect(0, 0, 100, 100, 0, 0, 20, 0);
+  stroke(227, 201, 73, 170);
+  fill(227, 201, 73, 170);
+  rect(0, 0, 120, 120, 0, 0, 40, 0);
   //mountain 3d
   stroke(139, 120, 42, 200); 
   fill(139, 120, 42, 200); 
@@ -30,7 +41,25 @@ void draw() {
   //cloud
   stroke(255);
   fill(255);
-  rect(350, 100, 100, 50, 20, 20, 20, 20);
+  rect(b+350, 100, 100, 50, 20, 20, 20, 20);
+  rect(b+400, 90, 100, 50, 20, 20, 20, 20);
+  
+  b = b+1;
+  if (b > 400) {
+    b = -500;
+  }
+  
+  //cloud
+  stroke(255);
+  fill(255);
+  rect(a+20, 150, 100, 50, 20, 20, 20, 20);
+  rect(a, 140, 100, 50, 20, 20, 20, 20);
+  
+  a = a+1;
+  if (a > 700) {
+    a = -100;
+  }
+  
   
   cacti(cactiY, 0); 
   cactiY=cactiY+1;
